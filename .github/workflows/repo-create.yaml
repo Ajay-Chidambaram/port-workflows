@@ -39,7 +39,7 @@ jobs:
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           portRunId: ${{ fromJson(inputs.port_context).runId }}
           repositoryName: ${{ inputs.project_name }}-backend
-          portUserInputs: '{"cookiecutter_app_name": "${{ inputs.service_name }}" }'
+          portUserInputs: '{"cookiecutter_app_name": "${{ inputs.project_name }}" }'
           cookiecutterTemplate: https://github.com/lacion/cookiecutter-golang
           blueprintIdentifier: "service"
           organizationName: ${{ env.ORG_NAME }}
@@ -52,7 +52,7 @@ jobs:
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           portRunId: ${{ fromJson(inputs.port_context).runId }}
           repositoryName: ${{ inputs.project_name }}-frontend
-          portUserInputs: '{"cookiecutter_app_name": "${{ inputs.service_name }}" }'
+          portUserInputs: '{"cookiecutter_app_name": "${{ inputs.project_name }}" }'
           cookiecutterTemplate: https://github.com/thoughtbot/react-native-template
           blueprintIdentifier: "service"
           organizationName: ${{ env.ORG_NAME }}
