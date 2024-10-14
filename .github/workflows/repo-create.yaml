@@ -5,9 +5,25 @@ on:
       port_context:
         required: true
         description: Includes the action's run id
-      service_name:
+      project_name:
         required: true
-        description: The name of the new service
+        description: The name of the project
+        type: string
+      backend_framework:
+        required: true
+        description: Backend Framework
+        type: string
+      frontend_framework:
+        required: true
+        description: Frontend Framework
+        type: string
+      cloud_provider:
+        required: true
+        description: Cloud Provider
+        type: string
+      ai_model:
+        required: true
+        description: AI Model
         type: string
 jobs:
   scaffold-service:
